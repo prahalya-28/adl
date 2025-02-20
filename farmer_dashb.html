@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="farmer_dashb.css">
+    <script defer src="farmer_dashb.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="DMS Logo">
+            <h1>Farmer Dashboard</h1>
+        </div>
+        <button class="logout-btn">Logout</button>
+    </header>
+
+    <main>
+        <section class="dashboard-options">
+            <button class="btn" onclick="navigateTo('products')">Manage Products</button>
+            <button class="btn" onclick="navigateTo('orders')">View Orders</button>
+            <button class="btn" onclick="navigateTo('earnings')">Check Earnings</button>
+            <button class="btn" onclick="navigateTo('support')">Get Support</button>
+        </section>
+        <section class="profile">
+            <img src="images/farmer_profile.jpg" alt="Farmer Profile" class="profile-img">
+            <h2>Welcome, Farmer John</h2>
+            <p>Location: Tamil Nadu, India</p>
+        </section>
+        <!-- Farmer Ranking Section -->
+        <section class="farmer-ranking">
+            <h2>Your Performance</h2>
+            <p><strong>Rank:</strong> <span id="rank">Loading...</span></p>
+            <p><strong>Products Sold today:</strong> <span id="productsSold">Loading...</span></p>
+            <p><strong>Overall Rating:</strong> <span id="rating">Loading...</span></p>
+            
+            <h3>Top Farmers</h3>
+            <ul id="leaderboard"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Direct Market Access. All rights reserved.</p>
+    </footer>
+</body>
+</html>

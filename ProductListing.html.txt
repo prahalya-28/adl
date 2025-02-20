@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listings</title>
+    <link rel="stylesheet" href="ProductListing.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">Farmers' Marketplace</div>
+
+    <!-- Scrolling Offers Section -->
+    <div class="offers-container">
+        <marquee behavior="scroll" direction="left">
+            🚜 50% off on organic tomatoes! 🌱 Fresh mangoes at ₹60/kg! 🍊 Limited-time discount on dairy products! 🥛 
+        </marquee>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+    </div>
+
+    <!-- Product Listings -->
+    <div class="container">
+        <div class="product-grid" id="productList">
+            <!-- Products will be added dynamically using JavaScript -->
+        </div>
+    </div>
+
+    <script src="ProductListing.js"></script>
+</body>
+</html>

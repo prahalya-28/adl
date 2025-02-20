@@ -1,0 +1,35 @@
+// Sample product data
+const products = [
+    { name: "Fresh Tomatoes", price: "₹30/kg", image: "tomato.jpg" },
+    { name: "Organic Carrots", price: "₹40/kg", image: "carrot.jpg" },
+    { name: "Juicy Apples", price: "₹100/kg", image: "apples.jpg" },
+    { name: "Golden Corn", price: "₹50/litre", image: "corn.jpg" },
+    { name: "Sweet Mangoes", price: "₹80/kg", image: "mango.jpg" },
+];
+
+// Function to display products
+function displayProducts(filteredProducts) {
+    const productList = document.getElementById("productList");
+    productList.innerHTML = ""; // Clear existing content
+
+    filteredProducts.forEach(product => {
+        const productCard = `
+            <div class="product-card">
+                <img src="${product.image}" class="product-image" alt="${product.name}">
+                <div class="product-name">${product.name}</div>
+                <div class="product-price">${product.price}</div>
+            </div>
+        `;
+        productList.innerHTML += productCard;
+    });
+}
+
+// Search Functionality
+document.getElementById("searchInput").addEventListener("input", function() {
+    const searchText = this.value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchText));
+    displayProducts(filteredProducts);
+});
+
+// Initial Load
+displayProducts(products);

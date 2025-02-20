@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(crops.jpg);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles and animation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e4d26;
+    color: white;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease-in-out;
+}
+h1{
+    font-Size:50px;
+}
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+    background: url('farm-banner.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    color:#2c3e50
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* How It Works Section */
+.how-it-works {
+    background: linear-gradient(to right, #1e4d26, #4b8b3b);
+    padding: 50px 20px;
+    color: white;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 40%; /* Further reduced width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0,50);
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+/* Feature Grid Animation */
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: scaleUp 0.8s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    padding: 30px 20px;
+    color: white;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 50%; /* Reduced width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+footer
+{
+    color:white;
+}
+.ul-items
+{
+    color:white;
+}

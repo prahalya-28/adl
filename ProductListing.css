@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2d7a3e;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Scrolling Offers */
+.offers-container {
+    background: #ffeb3b;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d84315;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 2px solid #d84315;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    color: #2d7a3e;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 80%;
+    }
+}

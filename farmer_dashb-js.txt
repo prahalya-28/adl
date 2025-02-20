@@ -1,0 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Sample data (In real case, fetch from API or database)
+    const farmerData = {
+        name: "Farmer John",
+        rank: 3,
+        productsSold: 150,
+        rating: 4.7
+    };
+
+    const topFarmers = [
+        { name: "Farmer A", productsSold: 200, rating: 4.9 },
+        { name: "Farmer B", productsSold: 180, rating: 4.8 },
+        { name: "Farmer John", productsSold: 150, rating: 4.7 },
+        { name: "Farmer C", productsSold: 130, rating: 4.6 },
+        { name: "Farmer D", productsSold: 120, rating: 4.5 }
+    ];
+
+    // Update UI with farmer data
+    document.getElementById("rank").textContent = `#${farmerData.rank}`;
+    document.getElementById("productsSold").textContent = farmerData.productsSold;
+    document.getElementById("rating").textContent = farmerData.rating.toFixed(1);
+
+    // Populate leaderboard
+    const leaderboardList = document.getElementById("leaderboard");
+    leaderboardList.innerHTML = ""; // Clear old data
+
+    topFarmers.forEach(farmer => {
+        let li = document.createElement("li");
+        li.textContent = `${farmer.name} - ${farmer.productsSold} Sold | ⭐ ${farmer.rating}`;
+        leaderboardList.appendChild(li);
+    });
+});
+
+// Navigation function for buttons
+function navigateTo(page) {
+    alert(`Navigating to ${page} page!`); // Replace with actual page redirection
+}

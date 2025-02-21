@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Farmers' Online Market</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <form action="register.php" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <select name="user_type" required>
+                <option value="">Select User Type</option>
+                <option value="farmer">Farmer</option>
+                <option value="buyer">Buyer</option>
+                <option value="logistics">Logistics Partner</option>
+            </select>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>
